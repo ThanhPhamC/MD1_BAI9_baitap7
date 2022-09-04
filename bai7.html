@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hv:hover{
+            background-color: cyan;
+        }
+    </style>
+<body>
+------------bai1------------------
+<table border="1">
+    <tr>
+        <td align="center" colspan="3">BÀI 1 KIỂM TRA CHIA HẾT</td>
+    </tr>
+    <tr>
+        <td><input id="A" placeholder="Nhập A " value="" ></td>
+        <td><input id="B" placeholder="Nhập B " value="" ></td>
+        <td><button class="hv" onclick="check()">Kiểm tra</button></td>
+    </tr>
+    <tr><td height="50px" align="center" colspan="3" ><p id="kq" ></p></td></tr>
+</table>
+------------bai2------------------
+<table border="1" >
+    <tr>
+        <td align="center" colspan="2"  >Bài 2 kiểm tra độ tuổi </td>
+    </tr>
+    <tr>
+        <td><input id="C" placeholder="NHẬP TUỔI" value="" ></td>
+        <td><button class="hv" onclick="bai2()">Kiểm tra</button></td>
+    </tr>
+    <tr><td height="50px" align="center" colspan="3" ><p id="dotuoi" ></p></td></tr>
+</table>
+------------bai3------------------
+<table border="1" >
+    <tr>
+        <td align="center" colspan="2"  >Bai 3 kiểm tra số nguyên </td>
+    </tr>
+    <tr>
+        <td><input id="D" placeholder="Nhập số bất kì" value="" ></td>
+        <td><button class="hv" onclick="bai3()">Kiểm tra</button></td>
+    </tr>
+    <tr><td height="50px" align="center" colspan="3" ><p id="bai3" ></p></td></tr>
+</table>
+------------bai4------------------
+<table border="1">
+    <tr>
+        <td align="center" colspan="4">BÀI 4 kiểm tra số lớn <nhất></nhất></td>
+    </tr>
+    <tr>
+        <td><input id="so1" placeholder="Nhập A " value="0" ></td>
+        <td><input id="so2" placeholder="Nhập D " value="0" ></td>
+        <td><input id="so3" placeholder="Nhập C " value="0" ></td>
+        <td><button class="hv" onclick="baiso4()">Kiểm tra</button></td>
+    </tr>
+    <tr><td height="50px" align="center" colspan="3" ><p id="bai4" ></p></td></tr>
+</table>
+-------bai5------------------
+<table border="1" style="border-collapse: collapse">
+    <tr>
+        <td align="center" colspan="4">BÀI 5 tính học lực <nhất></nhất></td>
+    </tr>
+    <tr>
+        <td><input id="5so1"  placeholder="Nhập điểm kiểm tra " value="" ></td>
+        <td><input id="5so2" placeholder="Nhập điểm giữa kì " value="" ></td>
+        <td><input id="5so3" placeholder="Nhập điểm cuối năm " value="" ></td>
+        <td><button class="hv" onclick="baiso5()">Kết Quả</button></td>
+    </tr>
+    <tr>
+        <td height="50px" width="160px" colspan="2" align="center" >Điểm trung bình:<p id="bai51"></p></td>
+        <td height="50px" colspan="2" align="center" >Học Lực :<p id="bai52"></p></td>
+    </tr>
+</table>
+-------------------bai6---------------------------
+<table border="1" style="border-collapse: collapse">
+    <tr>
+        <td align="center" colspan="4">BÀI 6 tính hoa hồng theo doanh    <nhất></nhất></td>
+    </tr>
+    <tr>
+        <td  width="160px"  align="center" >Doanh thu của bạn : </td>
+        <td > <input id="doanhthu" placeholder="Nhập doanh thu(tr) " value="" >   </td>
+        <td align="center" ><button class="hv" onclick="baiso6()">Kết Quả</button></td>
+        </tr>
+    <tr>
+        <td> Doanh thu <= 50tr</td>
+        <td>50tr< Doanh thu <= 200tr </td>
+        <td>Doanh thu >200tr</td>
+    </tr>
+    <tr align="center" >
+        <td><p id="duoi50">Hoa hồng là 10% =...tr</p></td>
+        <td><p id="giua50">Hoa hồng là 15% =...tr</p></td>
+        <td><p id="tren200">Hoa hồng là 20% =...tr</p></td>
+    </tr>
+</table>
+------------------bai7----------------------
+<table border="1" style="border-collapse: collapse">
+    <tr>
+        <td align="center" colspan="4">BÀI 6 tính cước điện  thoại   </td>
+    </tr>
+    <tr>
+        <td  width="160px"  align="center" >Số giờ sử dụng: </td>
+        <td > <input id="sogio" placeholder="Nhập số giờ " value="" >   </td>
+        <td align="center" ><button class="hv" onclick="baiso7()">Kết Quả</button></td>
+    </tr>
+    <tr align="center">
+        <td > số giờ <= 5h đơn giá 5000/1h</td>
+        <td>5h< số giờ <= 10h đơn giá 3000/1h</td>
+        <td>số giờ >10h đơn giá 1000/1h</td>
+    </tr>
+    <tr align="center" >
+        <td><p id="duoi5">Tiền cước =... vnd</p></td>
+        <td><p id="giua5">Tiền cước =... vnd</p></td>
+        <td><p id="tren10">Tiền cước =... vnd</p></td>
+    </tr>
+</table>
+<script >
+    // ------------bai 1 chia het ----------------
+    function check(){
+    a= +document.getElementById("A").value;
+    console.log("a la"+a)
+    b=+document.getElementById("B").value;
+    (a%b==0)? document.getElementById("kq").innerHTML=("A chia hết cho B"): document.getElementById("kq").innerHTML=("A không chia hết cho B")
+}
+// ---------- bai 2 kiem tra tuoi------------
+function bai2() {
+    let c = +document.getElementById("C").value;
+    (c < 15) ? document.getElementById("dotuoi").innerText = ("Bạn chưa đủ tuổi vào lớp 10") : document.getElementById("dotuoi").innerText = ("Bạn đã đủ tuổi vào lớp 10")
+}
+// ---------- bai 3 kiem so nguyen------------
+function bai3() {
+    let d = +document.getElementById("D").value;
+    (d < 0) ? document.getElementById("bai3").innerText = ("Là số nhỏ hơn 0") : (d==0)? document.getElementById("bai3").innerText = ("Là số 0"): document.getElementById("bai3").innerText = ("Là số lớn hơn 0")
+}
+// ---------- bai 4 kiem tra so lon nhat------------
+function baiso4() {
+    let e=parseInt(document.getElementById("so1").value);
+    let f=parseInt(document.getElementById("so2").value);
+    let g=parseInt(document.getElementById("so3").value);
+if (e>f && e>g){
+    document.getElementById("bai4").innerHTML=" Số lớn nhấ là "+e
+}else if(f>g){
+        document.getElementById("bai4").innerHTML=" Số lớn nhấ là "+f
+}else {document.getElementById("bai4").innerHTML=" Số lớn nhấ là "+g
+}
+}
+// ------bai 5 tinh học lực---------------
+function baiso5() {
+    dkt=+document.getElementById("5so1").value;
+    dgk=+document.getElementById("5so2").value;
+    dcn=+document.getElementById("5so3").value;
+    dtb=parseInt(dkt+dgk+dcn)/3;
+        document.getElementById("bai51").innerHTML=+dtb;
+    (dtb>10)?document.getElementById("bai52").innerHTML="Kiểm tra lại đầu vào"
+        :(dtb<0)? document.getElementById("bai52").innerHTML="Kiểm tra lại đầu vào"
+             : ( dtb >=+8)?document.getElementById("bai52").innerHTML="Giỏi"
+                 : (dtb>=+6)? document.getElementById("bai52").innerHTML="Khá"
+                     :(dtb>=+4)? document.getElementById("bai52").innerHTML="Yếu"
+                         :(dtb>=+0)? document.getElementById("bai52").innerHTML="Kém"
+                            :document.getElementById("bai52").innerHTML="Kiểm tra lại đầu vào"
+}
+// ------------bai 6 tinh doanh so-------------------
+    function baiso6() {
+        let hoaHong=parseFloat(document.getElementById("doanhthu").value);
+        (hoaHong<=0)? alert("nhập sai doanh số")
+            : (hoaHong>200)? document.getElementById("tren200").innerHTML="Hoa hồng = "+ parseFloat(0.2*hoaHong)+"tr"
+                :(hoaHong>50)?document.getElementById("giua50").innerHTML="Hoa hồng = "+parseFloat(0.15*hoaHong)+"tr"
+                    :document.getElementById("duoi50").innerHTML="Hoa hồng = "+ parseFloat(0.1*hoaHong)+"tr"
+    }
+    // ------------bai 7 tinh cuoc dien thoai-------------------
+    function baiso7() {
+        let tiencuoc = parseFloat(document.getElementById("sogio").value);
+        (tiencuoc <= 0) ? alert("nhập sai số giờ")
+            : (tiencuoc > 10) ? document.getElementById("tren10").innerHTML = "Tiền cước = " + parseFloat(1000 * tiencuoc) + "vnd"
+                : (tiencuoc > 5) ? document.getElementById("giua5").innerHTML = "Tiền cước = " + parseFloat(3000 * tiencuoc) + "vnd"
+                    : document.getElementById("duoi5").innerHTML = "Tiền cước = " + parseFloat(5000 * tiencuoc) + "vnd"
+    }
+
+</script>
+</body>
+</html>
